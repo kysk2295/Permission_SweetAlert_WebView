@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+        function getValues(){
+            var id=document.getElementById("id").value;
+            var pwd=document.getElementById("pwd").value;
+
+              ok.performClick(id,pwd);
+            document.getElementById("testP1").innerHTML=id+" / "+pwd;
+        }
+        function send(str){
+          document.getElementById("testP1").innerHTML=str;
+        }
+        function getValues2(){
+            var course="{'name':'안드로이드2','start':'2018-0902','end':'2018-0909'}";
+            var subject="{'sub':['java','android','jsp']}";
+            var student="{'student':[{'name':'홍길동','age':'20'}, {'name':'김길동','age':'30'}]}";
+
+            forJson.performClick(course,subject,student);
+
+        }
+
+    </script>
+</head>
+<body>
+your id : <input type="text" name="id" id="id"><br>
+your pwd: <input type="password" name="pwd" id="pwd"><br>
+<input type="button" value="OK" id="btnOK" onclick="getValues();">
+<input type="button" value="JSON" onclick="getValues2();">
+<p id="testP1">lkajfljlalk</p>
+
+</body>
+</html>
